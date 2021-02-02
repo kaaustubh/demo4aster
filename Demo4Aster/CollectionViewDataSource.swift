@@ -25,6 +25,7 @@ extension CollectionViewDataSource : UICollectionViewDelegateFlowLayout, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customcell", for: indexPath) as! CustomCell
         cell.descriptionLabel.text = products[indexPath.row].productDescription
+        cell.imageHeight.constant = CGFloat(products[indexPath.row].image.height)
         cell.descriptionHeight.constant = products[indexPath.row].productDescription.height(constraintedWidth: cell.frame.width, font: UIFont.systemFont(ofSize: 17.0))
         return cell
     }
@@ -39,8 +40,11 @@ extension CollectionViewDataSource : UICollectionViewDelegateFlowLayout, UIColle
         
         let widthPerItem = collectionView.frame.width / 2 - lay.minimumInteritemSpacing
         
-        let descriptionHeight = products[indexPath.row].productDescription.height(constraintedWidth: widthPerItem, font: UIFont.systemFont(ofSize: 17.0))
-        let totalHeight = imageHeight + Int(descriptionHeight) + 80
+        let attString = NSAttributedString(string: products[indexPath.row].productDescription, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0)])
+        let r = attString.boundingRect(with: CGSize(width: widthPerItem, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil)
+        let totalHeight = imageHeight + Int(r.height) + 60
+        
+        print(totalHeight)
         
         return CGSize(width:widthPerItem, height: CGFloat(totalHeight))
     }

@@ -53,7 +53,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kC-TL-IE1">
-                                                    <rect key="frame" x="20" y="193" width="354" height="30"/>
+                                                    <rect key="frame" x="10" y="193" width="374" height="30"/>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="834-NL-1dS"/>
@@ -64,14 +64,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3kC-TL-IE1" firstAttribute="leading" secondItem="hbV-3c-Bd2" secondAttribute="leading" constant="20" id="0Xq-zA-ZJ2"/>
+                                                <constraint firstItem="3kC-TL-IE1" firstAttribute="leading" secondItem="hbV-3c-Bd2" secondAttribute="leading" constant="10" id="0Xq-zA-ZJ2"/>
                                                 <constraint firstItem="aOP-wB-iIi" firstAttribute="top" secondItem="niM-dE-8gz" secondAttribute="bottom" constant="10" id="8Z7-k1-yQy"/>
                                                 <constraint firstAttribute="trailing" secondItem="aOP-wB-iIi" secondAttribute="trailing" constant="20" id="J6x-eP-pYC"/>
                                                 <constraint firstAttribute="trailing" secondItem="niM-dE-8gz" secondAttribute="trailing" constant="30" id="NU5-RQ-eQc"/>
                                                 <constraint firstItem="aOP-wB-iIi" firstAttribute="leading" secondItem="hbV-3c-Bd2" secondAttribute="leading" constant="20" id="OQ3-s1-DJO"/>
                                                 <constraint firstItem="3kC-TL-IE1" firstAttribute="top" secondItem="aOP-wB-iIi" secondAttribute="bottom" constant="10" id="R9Y-D6-hwW"/>
                                                 <constraint firstItem="niM-dE-8gz" firstAttribute="top" secondItem="hbV-3c-Bd2" secondAttribute="top" constant="15" id="Vgi-h0-tSp"/>
-                                                <constraint firstAttribute="trailing" secondItem="3kC-TL-IE1" secondAttribute="trailing" constant="20" id="yRZ-sj-yoA"/>
+                                                <constraint firstAttribute="trailing" secondItem="3kC-TL-IE1" secondAttribute="trailing" constant="10" id="yRZ-sj-yoA"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
