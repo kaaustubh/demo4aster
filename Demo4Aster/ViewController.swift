@@ -23,13 +23,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.collectionView.dataSource = dataSource
         self.collectionView.delegate = dataSource
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 5
-        layout.minimumInteritemSpacing = 5
+        let layout = CustomLayout()
+        layout.delegate = (dataSource as! CustomLayoutDelegate)
 //        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         self.collectionView.setCollectionViewLayout(layout, animated: true)
         dataSource.delegate = self
+        
         loadProducts()
     }
     
