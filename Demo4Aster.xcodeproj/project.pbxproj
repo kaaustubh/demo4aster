@@ -51,6 +51,19 @@
 		329C6E6A25C9EA1100FD7320 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6E6725C9EA1100FD7320 /* LoadingView.swift */; };
 		329F920825CDE15C00CC5643 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F920725CDE15C00CC5643 /* DetailViewController.swift */; };
 		329F920D25CDE7E400CC5643 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F920C25CDE7E400CC5643 /* LocalStorage.swift */; };
+		32E4F41B25CDF2190051357B /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F920C25CDE7E400CC5643 /* LocalStorage.swift */; };
+		32E4F41F25CDF22E0051357B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6E4925C9E43900FD7320 /* CustomCell.swift */; };
+		32E4F42325CDF2300051357B /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0325CC7BDF000117B1 /* CustomLayout.swift */; };
+		32E4F42725CDF2370051357B /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0825CD472C000117B1 /* WebImageView.swift */; };
+		32E4F42B25CDF23C0051357B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6DE925C88C7A00FD7320 /* ViewController.swift */; };
+		32E4F42F25CDF2500051357B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F920725CDE15C00CC5643 /* DetailViewController.swift */; };
+		32E4F43325CDF26C0051357B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6DE525C88C7A00FD7320 /* AppDelegate.swift */; };
+		32E4F43725CDF2980051357B /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0325CC7BDF000117B1 /* CustomLayout.swift */; };
+		32E4F43B25CDF29D0051357B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6DE925C88C7A00FD7320 /* ViewController.swift */; };
+		32E4F43F25CDF2A00051357B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F920725CDE15C00CC5643 /* DetailViewController.swift */; };
+		32E4F44325CDF2A60051357B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6E4925C9E43900FD7320 /* CustomCell.swift */; };
+		32E4F44725CDF2BE0051357B /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0825CD472C000117B1 /* WebImageView.swift */; };
+		32E4F44B25CDF2CC0051357B /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F920C25CDE7E400CC5643 /* LocalStorage.swift */; };
 		32E99C0425CC7BDF000117B1 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0325CC7BDF000117B1 /* CustomLayout.swift */; };
 		32E99C0925CD472C000117B1 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0825CD472C000117B1 /* WebImageView.swift */; };
 /* End PBXBuildFile section */
@@ -388,15 +401,22 @@
 			files = (
 				329C6DFD25C88C7B00FD7320 /* Demo4AsterTests.swift in Sources */,
 				329C6E3325C88CA900FD7320 /* CustomError.swift in Sources */,
+				32E4F43325CDF26C0051357B /* AppDelegate.swift in Sources */,
 				329C6E3E25C88D9600FD7320 /* Product.swift in Sources */,
 				329C6E2425C88CA900FD7320 /* ImageDownloader.swift in Sources */,
 				329C6E3025C88CA900FD7320 /* ProductsService.swift in Sources */,
 				329C6E6925C9EA1100FD7320 /* LoadingView.swift in Sources */,
+				32E4F42325CDF2300051357B /* CustomLayout.swift in Sources */,
 				329C6E5B25C9E83700FD7320 /* CollectionViewDataSource.swift in Sources */,
 				329C6E2D25C88CA900FD7320 /* NetworkEngine.swift in Sources */,
+				32E4F42F25CDF2500051357B /* DetailViewController.swift in Sources */,
+				32E4F42B25CDF23C0051357B /* ViewController.swift in Sources */,
+				32E4F42725CDF2370051357B /* WebImageView.swift in Sources */,
 				329C6E2725C88CA900FD7320 /* Reachability.swift in Sources */,
 				329C6E6225C9E9F200FD7320 /* Alert.swift in Sources */,
+				32E4F41B25CDF2190051357B /* LocalStorage.swift in Sources */,
 				329C6E2A25C88CA900FD7320 /* Path.swift in Sources */,
+				32E4F41F25CDF22E0051357B /* CustomCell.swift in Sources */,
 				329C6E2125C88CA900FD7320 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,16 +426,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				329C6E0825C88C7B00FD7320 /* Demo4AsterUITests.swift in Sources */,
+				32E4F44725CDF2BE0051357B /* WebImageView.swift in Sources */,
 				329C6E3425C88CA900FD7320 /* CustomError.swift in Sources */,
 				329C6E3F25C88D9600FD7320 /* Product.swift in Sources */,
 				329C6E2525C88CA900FD7320 /* ImageDownloader.swift in Sources */,
+				32E4F43B25CDF29D0051357B /* ViewController.swift in Sources */,
 				329C6E3125C88CA900FD7320 /* ProductsService.swift in Sources */,
+				32E4F44325CDF2A60051357B /* CustomCell.swift in Sources */,
 				329C6E6A25C9EA1100FD7320 /* LoadingView.swift in Sources */,
+				32E4F44B25CDF2CC0051357B /* LocalStorage.swift in Sources */,
 				329C6E5C25C9E83700FD7320 /* CollectionViewDataSource.swift in Sources */,
 				329C6E2E25C88CA900FD7320 /* NetworkEngine.swift in Sources */,
 				329C6E2825C88CA900FD7320 /* Reachability.swift in Sources */,
 				329C6E6325C9E9F200FD7320 /* Alert.swift in Sources */,
 				329C6E2B25C88CA900FD7320 /* Path.swift in Sources */,
+				32E4F43F25CDF2A00051357B /* DetailViewController.swift in Sources */,
+				32E4F43725CDF2980051357B /* CustomLayout.swift in Sources */,
 				329C6E2225C88CA900FD7320 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
