@@ -34,7 +34,7 @@ extension CollectionViewDataSource : UICollectionViewDelegateFlowLayout, UIColle
         if let placeholder = UIImage(named: "placeholder") {
             cell.imageView.imageURL(urlString: product.image.url, placeHolderImage: placeholder)
         }
-        cell.priceLabel.text = "$ \(product.price)"
+        cell.priceLabel.text = "$\(product.price)"
         
         return cell
     }

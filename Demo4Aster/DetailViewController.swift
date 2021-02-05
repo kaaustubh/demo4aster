@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
         guard let product = product else{
             return
         }
-        self.priceLabel.text = "$ \(product.price)"
+        self.priceLabel.text = "$\(product.price)"
         self.imageView.imageURL(urlString: product.image.url, placeHolderImage: UIImage.init(named: "placeholder"))
     }
     
