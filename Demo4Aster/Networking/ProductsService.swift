@@ -16,21 +16,36 @@ class ProductsService {
     func loadProducts(offset: Int, limit: Int, completion: @escaping ([Product]?, CustomError?) -> ()) -> URLSessionDataTask? {
         let params: JSON = ["count": limit, "from": offset]
         
-        return client.load(path: "/products", method: .get, params: params) { result, error in
-            if (error != nil) {
-                completion(nil, error)
+        return client.load(path: "/products", method: .get, params: params) { result, nError in
+            if (nError != nil) {
+                do {
+                    let products = try LocalStorage().retriveProducts()
+                    completion(products, nil)
+                }
+                catch {
+                    completion(nil, nError)
+                }
+                
             }
         
             else if (result != nil) {
                 do {
-                    let postResponse = try JSONDecoder().decode([Product].self, from: result as! Data)
-                    completion(postResponse, nil)
+                    let products = try JSONDecoder().decode([Product].self, from: result as! Data)
+                    try LocalStorage().save(products: products)
+                    completion(products, nil)
                 } catch {
                     print(error)
+                    completion(nil, CustomError(code: 405, type: "NoResult", message: "No results found"))
                 }
             }
             else {
-                completion(nil, CustomError(code: 405, type: "NoResult", message: "No results found"))
+                do {
+                    let products = try LocalStorage().retriveProducts()
+                    completion(products, nil)
+                }catch {
+                    completion(nil, CustomError(code: 405, type: "NoResult", message: "No results found"))
+                }
+                
             }
         }
     }

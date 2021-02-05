@@ -43,9 +43,15 @@ class ViewController: UIViewController {
     }
     
     func loadProducts() {
+        if lastProductId == 1 {
+            LoadingView.sharedInstance.showIndicator()
+        }
         ProductsService().loadProducts(offset: lastProductId, limit: 10) {[weak self] products, error in
             guard let self = self else {return}
             DispatchQueue.main.async{
+                if self.lastProductId == 1 {
+                    LoadingView.sharedInstance.hideIndicator()
+                }
                 if error == nil {
                     if let products = products {
                         self.dataSource.appendProducts(newProducts: products)
