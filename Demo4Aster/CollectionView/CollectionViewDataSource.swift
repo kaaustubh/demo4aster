@@ -24,9 +24,14 @@ extension CollectionViewDataSource : UICollectionViewDelegateFlowLayout, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customcell", for: indexPath) as! CustomCell
-        cell.descriptionLabel.text = products[indexPath.item].productDescription
-        cell.imageHeight.constant = CGFloat(products[indexPath.item].image.height)
-        cell.descriptionHeight.constant = products[indexPath.item].productDescription.height(constraintedWidth: cell.frame.width, font: UIFont.systemFont(ofSize: 20.0))
+        let product = products[indexPath.item]
+        cell.descriptionLabel.text = product.productDescription
+        cell.imageHeight.constant = CGFloat(product.image.height)
+        cell.descriptionHeight.constant = product.productDescription.height(constraintedWidth: cell.frame.width, font: UIFont.systemFont(ofSize: 20.0))
+        if let placeholder = UIImage(named: "placeholder") {
+            cell.imageView.imageURL(urlString: product.image.url, placeHolderImage: placeholder)
+        }
+        
         return cell
     }
     
