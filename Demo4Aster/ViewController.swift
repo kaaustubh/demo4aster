@@ -23,9 +23,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.collectionView.dataSource = dataSource
         self.collectionView.delegate = dataSource
-        let layout = CustomLayout()
-        layout.delegate = (dataSource as! CustomLayoutDelegate)
-//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        
+        let layout = self.collectionView.collectionViewLayout as! CustomLayout
+        layout.delegate = (dataSource as CustomLayoutDelegate)
+
         self.collectionView.setCollectionViewLayout(layout, animated: true)
         dataSource.delegate = self
         
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
                         if let last = products.last {
                             self.lastProductId = last.id + 1
                         }
+                        let layout = self.collectionView.collectionViewLayout as! CustomLayout
+                        self.collectionView.collectionViewLayout = layout
+                        layout.prepare()
+                        self.collectionView.reloadItems(at: self.collectionView.indexPathsForVisibleItems)
                         self.collectionView.reloadData()
                     }
                     

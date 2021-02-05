@@ -19,7 +19,10 @@ class CollectionViewDataSource: NSObject {
 extension CollectionViewDataSource : UICollectionViewDelegateFlowLayout, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        products.count
+        return products.count
+    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,6 +61,15 @@ extension CollectionViewDataSource: CustomLayoutDelegate {
 
 extension CollectionViewDataSource : UICollectionViewDelegate {
    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == products.count - 1 {
+            guard let delegate = delegate  else {
+                return
+            }
+            delegate.loadNextsProducts()
+        }
+    }
+    
 }
 
 extension String {
