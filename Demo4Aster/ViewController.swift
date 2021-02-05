@@ -9,6 +9,7 @@ import UIKit
 
 protocol CollectionViewReloadDelegate {
     func loadNextsProducts()
+    func showDetails(for product: Product)
 }
 
 class ViewController: UIViewController {
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
     var products = [Product]()
     var lastProductId = 1
     var dataSource = CollectionViewDataSource()
+    var productToDisplay: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,13 @@ class ViewController: UIViewController {
         dataSource.delegate = self
         
         loadProducts()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! DetailViewController
+        if let product = self.productToDisplay {
+            controller.product = product
+        }
     }
     
     func loadProducts() {
@@ -69,6 +78,11 @@ class ViewController: UIViewController {
 extension ViewController : CollectionViewReloadDelegate {
     func loadNextsProducts() {
         loadProducts()
+    }
+    
+    func showDetails(for product: Product) {
+        self.productToDisplay = product
+        performSegue(withIdentifier: "details", sender: nil)
     }
 }
 

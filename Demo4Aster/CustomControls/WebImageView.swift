@@ -10,10 +10,12 @@ import UIKit
 
 extension UIImageView {
 
-public func imageURL(urlString: String, placeHolderImage: UIImage) {
-
-       if self.image == nil{
-             self.image = placeHolderImage
+public func imageURL(urlString: String, placeHolderImage: UIImage?) {
+    let defaultImage = UIImage.init(named: "placeholder")
+       if self.image == nil, let placeHolderImage = placeHolderImage {
+        self.image = placeHolderImage
+       } else {
+        self.image = defaultImage
        }
 
        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in

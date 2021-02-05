@@ -34,6 +34,7 @@ extension CollectionViewDataSource : UICollectionViewDelegateFlowLayout, UIColle
         if let placeholder = UIImage(named: "placeholder") {
             cell.imageView.imageURL(urlString: product.image.url, placeHolderImage: placeholder)
         }
+        cell.priceLabel.text = "$ \(product.price)"
         
         return cell
     }
@@ -68,6 +69,15 @@ extension CollectionViewDataSource : UICollectionViewDelegate {
             }
             delegate.loadNextsProducts()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let delegate = delegate else {
+            return
+        }
+        let product = products[indexPath.item]
+        delegate.showDetails(for: product)
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
     
 }

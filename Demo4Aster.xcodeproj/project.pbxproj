@@ -49,6 +49,7 @@
 		329C6E6825C9EA1100FD7320 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6E6725C9EA1100FD7320 /* LoadingView.swift */; };
 		329C6E6925C9EA1100FD7320 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6E6725C9EA1100FD7320 /* LoadingView.swift */; };
 		329C6E6A25C9EA1100FD7320 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6E6725C9EA1100FD7320 /* LoadingView.swift */; };
+		329F920825CDE15C00CC5643 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F920725CDE15C00CC5643 /* DetailViewController.swift */; };
 		32E99C0425CC7BDF000117B1 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0325CC7BDF000117B1 /* CustomLayout.swift */; };
 		32E99C0925CD472C000117B1 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E99C0825CD472C000117B1 /* WebImageView.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		329C6E5925C9E83700FD7320 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		329C6E6025C9E9F200FD7320 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		329C6E6725C9EA1100FD7320 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		329F920725CDE15C00CC5643 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		32E99C0325CC7BDF000117B1 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		32E99C0825CD472C000117B1 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				329C6DEE25C88C7A00FD7320 /* Assets.xcassets */,
 				329C6DF025C88C7A00FD7320 /* LaunchScreen.storyboard */,
 				329C6DF325C88C7A00FD7320 /* Info.plist */,
+				329F920725CDE15C00CC5643 /* DetailViewController.swift */,
 			);
 			path = Demo4Aster;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				329C6E2625C88CA900FD7320 /* Reachability.swift in Sources */,
 				32E99C0425CC7BDF000117B1 /* CustomLayout.swift in Sources */,
 				329C6E6125C9E9F200FD7320 /* Alert.swift in Sources */,
+				329F920825CDE15C00CC5643 /* DetailViewController.swift in Sources */,
 				329C6E3D25C88D9600FD7320 /* Product.swift in Sources */,
 				329C6E6825C9EA1100FD7320 /* LoadingView.swift in Sources */,
 				329C6E3225C88CA900FD7320 /* CustomError.swift in Sources */,
